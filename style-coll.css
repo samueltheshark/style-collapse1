@@ -1,0 +1,323 @@
+*{box-sizing: border-box;}
+.base-page {
+    display: flex;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+    border: 1px none #000;
+    background-color: #f2f7fb;
+    font-family: Lato, sans-serif;
+    color: #42124d;
+    white-space: normal;
+}
+.accordion {
+    background-color: #DCB57C;
+    color: #42124C;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+.active, .accordion:hover {
+    background-color: #42124C;
+    color:#DCB57C;
+}
+.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+.active:after {
+    content: "\2212";
+}
+/*Max on screen*/
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    width:100%;
+}
+.tab-pane-wrapper {
+    display: flex;
+    width: 100%;
+    margin-left: 140px;
+    justify-content: flex-start;
+}
+/*padding content*/
+.w-tab-content {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 50px;
+}
+.w-tab-content-btns{
+    padding: 50px 50px 2px 50px;
+}
+@media only screen and (max-width: 600px) {
+  .w-tab-content {
+    padding: 10px;
+  }
+  .w-tab-content-btns{
+    padding: 10px 10px 1px 10px;
+  }
+  .space_belowgrid{
+    height: 400px;
+  }
+}
+.tab-title{
+    font-weight: 400;
+}
+h1 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 38px;
+    line-height: 44px;
+    font-weight: 700;
+}
+.tab-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+@media screen and (max-width: 991px)
+.tab-content {
+    align-items: flex-end;
+}
+.tab-tiitle-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.tab-text,.bold-text {
+    padding-bottom: 60px;
+}
+.tab-bold{
+    font-weight: 500;
+}
+.tab-text {
+    display: inline-block;
+    padding-top: 8px;
+    padding-bottom: 20px;
+    line-height: 22px;
+    font-weight: 300;
+    font-size: 16px;
+}
+.tab-text-br{
+    padding-top: 8px;
+    padding-bottom: 20px;
+    line-height: 22px;
+    font-weight: 300;
+    font-size: 16px;
+}
+@media screen and (max-width: 767px)
+.grid-wrapper {
+    width: 100%;
+}
+@media screen and (max-width: 991px)
+.grid-wrapper {
+    align-items: center;
+}
+.grid-wrapper {
+    display: flex;
+    width: 100%;
+    padding-top: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+@media screen and (max-width: 767px)
+.grid-wrapper {
+    width: 100%;
+}
+@media screen and (max-width: 991px)
+.grid-wrapper {
+    align-items: center;
+}
+@media screen and (max-width: 479px)
+.resource-sub-heading {
+    width: 100%;
+}
+@media screen and (max-width: 767px)
+.resource-sub-heading {
+    width: 100%;
+}
+@media screen and (max-width: 991px)
+.resource-sub-heading {
+    width: 100%;
+}
+.resource-sub-heading {
+    width: 100%;
+    padding-left: 10px;
+    background-color: #dbb67b;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+@media screen and (max-width: 479px)
+.grid-2 {
+    width: 100%;
+}
+@media screen and (max-width: 767px)
+.grid-2 {
+    width: 100%;
+}
+@media screen and (max-width: 991px)
+.grid-2 {
+    width: 100%;
+}
+.grid-2 {
+    width: 100%;
+    margin-bottom: 20px;
+    align-items: start;
+    -ms-grid-row-align: auto;
+    align-self: auto;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto auto;
+    grid-template-rows: auto auto;
+}
+.w-layout-grid {
+    display: -ms-grid;
+    display: grid;
+    grid-auto-columns: 1fr;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto auto;
+    grid-template-rows: auto auto;
+    grid-row-gap: 16px;
+    grid-column-gap: 16px;
+}
+#w-node-ef0481d1-b039-5c69-cb5a-5a553d3e2e1d-29de89be {
+    -ms-grid-column: span 1;
+    grid-column-start: span 1;
+    -ms-grid-column-span: 1;
+    grid-column-end: span 1;
+    -ms-grid-row: span 1;
+    grid-row-start: span 1;
+    -ms-grid-row-span: 1;
+    grid-row-end: span 1;
+}
+@media screen and (max-width: 479px)
+.resource-table-heading {
+    height: 44px;
+    font-size: 15px;
+    line-height: 18px;
+}
+.resource-table-heading {
+    padding-left: 10px;
+    background-color: #42124d;
+    color: #f2f7fb;
+    font-size: 18px;
+    font-weight: 400;
+}
+@media screen and (max-width: 479px)
+.resource-text {
+    line-height: 16px;
+}
+.resource-text {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 0px;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: left;
+}
+.resource-text,.sub-resource {
+    padding-left: 30px;
+    font-weight: 400;
+}
+
+.sub-resource{
+    font-weight: 500 !important;
+    padding-left: 20px !important;
+}
+@media screen and (max-width: 479px)
+.resource-text {
+    line-height: 16px;
+}
+.resource-text {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 0px;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: left;
+    font-weight: 300;
+}
+.list-sub-head {
+    font-weight: 500;
+}
+@media screen and (max-width: 479px)
+.grid-4._3xcol {
+    padding-bottom: 2px;
+    justify-items: stretch;
+    align-items: stretch;
+    -ms-grid-row-align: auto;
+    align-self: auto;
+}
+@media screen and (max-width: 767px)
+.grid-4._3xcol {
+    align-items: stretch;
+}
+@media screen and (max-width: 991px)
+.grid-4._3xcol {
+    margin-bottom: 0px;
+    align-items: stretch;
+}
+.grid-4._3xcol {
+    width: 100%;
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+@media screen and (max-width: 479px)
+.grid-4 {
+    width: 100%;
+}
+@media screen and (max-width: 767px)
+.grid-4 {
+    width: 100%;
+}
+@media screen and (max-width: 991px)
+.grid-4 {
+    width: 100%;
+}
+.grid-4 {
+    width: 80%;
+    margin-bottom: 20px;
+    align-items: start;
+    -ms-grid-row-align: auto;
+    align-self: auto;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto auto;
+    grid-template-rows: auto auto;
+}
+.container-subnav{
+    position: relative;
+    margin-top: 40px;
+}
+.subnav{
+    display: inline;
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+}
+.v1{
+    background-color: #42124C;
+    color: #DCB57C;
+}
+.v2{
+    background-color: #DCB57C;
+    color: #42124C;
+}
