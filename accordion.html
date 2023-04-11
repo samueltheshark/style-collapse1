@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://general-client-read-only.s3.eu-west-2.amazonaws.com/js-accounting/styles.css" />
+</head>
+<body class="base-page" style="margin: 0;">
 <button class="accordion">Employees' Statutory Payments</button>
 <div class="panel">
 <div class="w-tab-content">
@@ -328,3 +337,39 @@
     </div>
 </div>
 </div>
+
+<script>
+/* Acordion */
+var acc = document.getElementsByClassName("accordion");
+var i;
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+
+/*Hideand show subnav*/
+$(document).ready(function(){
+  $("#btn1").click(function(){
+    $("#IncTaxAllw").fadeIn();
+    $("#IncTaxRat").fadeOut();
+    $("#btn1").hide();
+    $("#btn2").show();
+  });
+  $("#btn2").click(function(){
+    $("#IncTaxAllw").fadeOut();
+    $("#IncTaxRat").fadeIn();
+    $("#btn1").show();
+    $("#btn2").hide();
+  });
+});
+</script>
+
+</body>
+</html>
