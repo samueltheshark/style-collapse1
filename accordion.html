@@ -328,35 +328,3 @@
     </div>
 </div>
 </div>
-<script>
-/* Acordion */
-var acc = document.getElementsByClassName("accordion");
-var i;
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    } 
-  });
-}
-
-/*Hideand show subnav*/
-$(document).ready(function(){
-  $("#btn1").click(function(){
-    $("#IncTaxAllw").fadeIn();
-    $("#IncTaxRat").fadeOut();
-    $("#btn1").hide();
-    $("#btn2").show();
-  });
-  $("#btn2").click(function(){
-    $("#IncTaxAllw").fadeOut();
-    $("#IncTaxRat").fadeIn();
-    $("#btn1").show();
-    $("#btn2").hide();
-  });
-});
-</script>
